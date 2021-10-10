@@ -228,7 +228,7 @@ assign BUTTONS = 0;
 
 wire [1:0] ar = status[14:13];
 
-assign VIDEO_ARX = (!ar) ? 12'd15 : (ar - 1'd1);
+assign VIDEO_ARX = (!ar) ? 12'd16 : (ar - 1'd1);
 assign VIDEO_ARY = (!ar) ? 12'd14 : 12'd0;
 
 `include "build_id.v"
@@ -410,7 +410,7 @@ wire hs, vs;
 wire [3:0] r,g,b;
 wire ce_pix;
 
-arcade_video #(240,12) arcade_video
+arcade_video #(256,12) arcade_video
 (
 	.*,
 
