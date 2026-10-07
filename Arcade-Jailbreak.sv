@@ -269,8 +269,8 @@ joydb joydb (
 
 assign USER_OUT = USER_OUT_DRIVE;
 // [MiSTer-DB9 END]
-wire [15:0]   joystick_0 = joydb_1ena ? (OSD_STATUS ? 16'b0 : joydb_1_mapped[8:0]) : joystick_0_USB;
-wire [15:0]   joystick_1 = joydb_2ena ? (OSD_STATUS ? 16'b0 : joydb_2_mapped[8:0]) : joydb_1ena ? joystick_0_USB : joystick_1_USB;
+wire [15:0]   joystick_0 = joydb_1ena ? (OSD_STATUS ? 16'b0 : joydb_1_mapped[9:0]) : joystick_0_USB;
+wire [15:0]   joystick_1 = joydb_2ena ? (OSD_STATUS ? 16'b0 : joydb_2_mapped[9:0]) : joydb_1ena ? joystick_0_USB : joystick_1_USB;
 
 assign ADC_BUS  = 'Z;
 //assign USER_OUT = '1;
